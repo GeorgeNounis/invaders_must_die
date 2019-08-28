@@ -15,6 +15,7 @@ public class PlayerFire : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space))
             {
                 objectPooler.SpawnFromPool("PlayerBullet", transform.position, Quaternion.identity);
+
             }
             elapsedTime = 0;
         }

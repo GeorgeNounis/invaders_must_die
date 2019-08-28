@@ -13,6 +13,11 @@ public class OpponentBehaviour : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         gameObject.SetActive(false);
+        if (GameObject.FindGameObjectsWithTag("Opponent").Length == 0)
+        {
+            GameManager.Instance.level++;
+            Debug.Log(GameManager.Instance.level);
+        }
     }
 
     // Update is called once per frame
