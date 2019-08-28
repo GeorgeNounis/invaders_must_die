@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
         if (_temp.x >= -2.6f && _temp.x <= 2.6f) {
             transform.position = _temp;
         }
-        
     }
 
     // Start is called before the first frame update
