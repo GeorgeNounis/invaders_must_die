@@ -159,7 +159,7 @@ MonoBehaviour:
       type: 3}
     size: 50
   - tag: OpponentBullet
-    prefab: {fileID: 6786644762294789005, guid: 26c8fa8e7e14d5440831c1b334180535,
+    prefab: {fileID: 4877127509973721629, guid: dab958b26e87c1642be274efc3eb32d5,
       type: 3}
     size: 50
 --- !u!4 &201075369
