@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public GameObject gameOver;
+    SoundManager soundManager;
 
     void Movement()
     {
@@ -29,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     { 
         //gameObject.SetActive(false);
         Time.timeScale = 0;
+        soundManager.PlayerExplosion.Play();
         gameOver.gameObject.SetActive(true);
 
     }
@@ -36,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        soundManager = SoundManager.Instance;
     }
 
     // Update is called once per frame

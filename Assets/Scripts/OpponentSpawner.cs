@@ -11,13 +11,16 @@ public class OpponentSpawner : MonoBehaviour
     void Start()
     {
         objectPooler = ObjectPooler.Instance;
-        Spawn();
+        Spawn(5,1);
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        if (GameObject.FindGameObjectsWithTag("Opponent").Length == 0)
+        {
+            Spawn(5, GameManager.Instance.level);
+        }
     }
     
     void Awake()
@@ -25,13 +28,11 @@ public class OpponentSpawner : MonoBehaviour
         
     }
 
-    void Spawn()
+    public void Spawn(int _opponentNumber, int _opponentRows)
     {
         float _xWidth = 4.8f;
-        float _yPos = 4.8f;
+        float _yPos = 4.5f;
         float _xPos;
-        int _opponentNumber = 6;
-        int _opponentRows = 3;
         float _stepY = 0.5f;
         float _stepX = _xWidth / (_opponentNumber - 1);
 

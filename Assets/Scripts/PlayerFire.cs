@@ -6,6 +6,7 @@ public class PlayerFire : MonoBehaviour
 {
     float elapsedTime;
     ObjectPooler objectPooler;
+    SoundManager soundManager;
 
     void Fire()
     {
@@ -15,6 +16,7 @@ public class PlayerFire : MonoBehaviour
             if (Input.GetKey(KeyCode.Space) || Input.GetKeyDown(KeyCode.Space))
             {
                 objectPooler.SpawnFromPool("PlayerBullet", transform.position, Quaternion.identity);
+                soundManager.PlayerFire.Play();
             }
             elapsedTime = 0;
         }
@@ -24,6 +26,7 @@ public class PlayerFire : MonoBehaviour
     {
         elapsedTime = 0;
         objectPooler = ObjectPooler.Instance;
+        soundManager = SoundManager.Instance;
     }
 
     void FixedUpdate()
