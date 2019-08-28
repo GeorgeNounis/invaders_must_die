@@ -20,7 +20,7 @@ public class OpponentFire : MonoBehaviour
 
     void Start()
     {
-        spawnTime = Random.Range(1, 10);
+        spawnTime = Random.Range(1, 4);
         elapsedTime = 0;
         objectPooler = ObjectPooler.Instance;
     }
